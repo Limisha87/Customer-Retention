@@ -1,0 +1,64 @@
+CHURN PREVENTION GUIDELINES
+
+Customer churn means that a customer stops using or paying for a
+company's service.
+
+Common churn indicators include:
+- Short customer tenure
+- Month-to-month contracts
+- High monthly charges
+- Poor customer support experience
+- Technical problems
+- Low engagement
+- Lack of perceived value
+
+
+EARLY WARNING
+
+Customers showing multiple churn indicators should be prioritized
+for proactive retention activities.
+
+The retention team should review the customer's profile before
+contacting the customer.
+
+
+PERSONALIZED RETENTION
+
+Retention recommendations should consider the customer's individual
+circumstances.
+
+For example:
+
+Short tenure:
+Provide onboarding and education.
+
+Month-to-month contract:
+Explain longer-term contract benefits.
+
+High charges:
+Review plan value and available alternatives.
+
+Technical problems:
+Provide technical assistance and follow-up.
+
+Poor engagement:
+Use relevant communication and customer education.
+
+
+RETENTION COMMUNICATION
+
+Communication should be helpful and personalized.
+
+Avoid aggressive sales messaging.
+
+The objective is to understand the customer's needs, solve problems,
+and improve customer satisfaction.
+
+
+FOLLOW-UP
+
+After a retention action, the company should monitor the customer
+and determine whether the problem has been resolved.
+
+Follow-up is especially important for customers previously identified
+as high churn risk.

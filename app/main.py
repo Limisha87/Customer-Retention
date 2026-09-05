@@ -78,9 +78,17 @@ index = pc.Index(
 # 6. HUGGING FACE EMBEDDINGS
 # ============================================================
 
-embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
+_embeddings = None
+
+def get_embeddings():
+    global _embeddings
+
+    if _embeddings is None:
+        _embeddings = HuggingFaceEmbeddings(
+            model_name="sentence-transformers/all-MiniLM-L6-v2"
+        )
+
+    return _embeddings
 
 
 # ============================================================
@@ -200,44 +208,24 @@ def ask_llm(question: str):
 # 11. RAG SEMANTIC SEARCH
 # ============================================================
 
-def retrieve_context(
-    question: str,
-    top_k: int = 3
-):
+def retrieve_context(question, top_k=3):
+    embeddings = get_embeddings()
 
-    # Create embedding for user question
-    query_vector = embeddings.embed_query(
-        question
-    )
+    query_vector = embeddings.embed_query(question)
 
-    # Search Pinecone
     results = index.query(
-
         vector=query_vector,
-
         top_k=top_k,
-
         include_metadata=True
     )
 
-    retrieved_text = []
+    documents = []
 
     for match in results["matches"]:
+        if match.get("metadata", {}).get("text"):
+            documents.append(match["metadata"]["text"])
 
-        metadata = match.get(
-            "metadata",
-            {}
-        )
-
-        text = metadata.get(
-            "text",
-            ""
-        )
-
-        if text:
-            retrieved_text.append(text)
-
-    return retrieved_text
+    return documents
 
 
 # ============================================================

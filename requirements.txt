@@ -1,9 +1,9 @@
 fastapi
 uvicorn
-pandas
-numpy
-scikit-learn
-joblib
+pandas==2.2.3
+numpy==2.2.3
+scikit-learn==1.7.2
+joblib==1.5.2
 python-dotenv
 huggingface_hub
 langchain
@@ -13,5 +13,4 @@ langchain-text-splitters
 langchain-huggingface
 pinecone
 sentence-transformers
-torch
 transformers
